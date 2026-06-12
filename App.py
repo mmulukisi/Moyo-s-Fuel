@@ -2,8 +2,8 @@ import streamlit as st
 import requests
 import xml.etree.ElementTree as ET
 
-# Set up the app page (This natively names your home screen icon!)
-st.set_page_config(page_title="Moyo fuel", page_icon="⛽")
+# Set up the app page (Changes the browser tab / home screen name)
+st.set_page_config(page_title="Moyo's Cheap Fuel Finder", page_icon="⛽")
 
 # The official FuelWatch WA codes for every fuel type
 FUEL_TYPES = {
@@ -52,7 +52,8 @@ def get_cheapest_fuel(suburb="Midland", product=1):
     return stations[0]
 
 # --- App UI ---
-st.title("Moyo fuel ⛽")
+# Changes the big header text on the page itself
+st.title("Moyo's Cheap Fuel Finder ⛽")
 st.write("Find the lowest fuel prices around the Midland area right now.")
 
 # The dropdown menu
